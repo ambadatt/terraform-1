@@ -1,0 +1,53 @@
+To install Terraform on Red Hat Enterprise Linux 8 (RHEL 8), follow these steps:
+
+1. Prerequisites
+Ensure you have sudo/root access.
+Verify that your system is connected to the internet.
+2. Update the System
+Run the following command to update the package repository and installed packages:
+
+bash
+Copy code
+sudo dnf update -y
+3. Install Required Dependencies
+Install dnf-plugins-core to enable additional repositories if not already installed:
+
+bash
+Copy code
+sudo dnf install -y dnf-plugins-core
+4. Add the HashiCorp Terraform Repository
+HashiCorp provides an official repository for Terraform. Add it using the command:
+
+bash
+Copy code
+sudo dnf config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+5. Install Terraform
+After adding the repository, install Terraform by running:
+
+bash
+Copy code
+sudo dnf install -y terraform
+6. Verify the Installation
+Check the installed version of Terraform to confirm it's installed correctly:
+
+bash
+Copy code
+terraform -v
+You should see output showing the Terraform version, such as:
+
+Copy code
+Terraform v1.x.x
+7. (Optional) Enable Auto-Completion
+To enable auto-completion for Terraform commands in your shell:
+
+bash
+Copy code
+terraform -install-autocomplete
+8. Start Using Terraform
+You can now create Terraform configuration files and start using it for infrastructure provisioning.
+
+Example: To initialize a directory for Terraform:
+
+bash
+Copy code
+terraform init
