@@ -1,3 +1,9 @@
+sudo dnf install -y dnf-plugins-core
+sudo dnf config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+sudo dnf install -y terraform
+terraform -v
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 To install Terraform on Red Hat Enterprise Linux 8 (RHEL 8), follow these steps:
 
 1. Prerequisites
